@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Funcionarios</title>
+    <link rel="stylesheet" href="./../styles/cadasFuncionarios.css">
+</head>
+
+<body>
+    <main>
+        <button type="button" class="voltar" onclick="location.href = './../pages/inicial.html'">Voltar</button>
+
+        <div class="container">
+            <h1>Cadastro</h1>
+
+            <input type="text" id="nomeInput" placeholder="Nome...">
+            <input type="text" id="cargoInput" placeholder="Cargo...">
+            <input type="text" id="idadeInput" placeholder="Idade...">
+            <input type="text" id="cpfInput" placeholder="CPF...">
+            <br />
+            <button id="addTask">Adicionar</button>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Idade</th>
+                        <th>CPF</th>
+                    </tr>
+                </thead>
+                <tbody class="tabLista">
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </main>
+    <script src="./../js/cadasFuncionario.js"></script>
+</body>
+
+</html>

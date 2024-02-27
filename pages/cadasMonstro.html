@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Monstros</title>
+    <link rel="stylesheet" href="./../styles/cadasMonstro.css">
+</head>
+
+<body>
+    <main>
+        <button type="button" class="voltar" onclick="location.href = './../pages/inicial.html'">Voltar</button>
+
+        <div class="container">
+            <h1>Cadastro</h1>
+
+            <input type="text" id="nomeInput" placeholder="Nome...">
+            <input type="text" id="hostInput" placeholder="Hostilidade...">
+            <input type="text" id="descInput" placeholder="descriçao...">
+            <input type="text" id="objInput" placeholder="Objetivo...">
+            <input type="text" id="encaInput" placeholder="Encarregado...">
+            <br />
+            <button id="addTask">Adicionar</button>
+
+            <div class="tipos">
+                <P>Nome</P>
+                <p>Hostilidade</p>
+                <p>descriçao</p>
+                <p>Objetivo</p>
+                <p>Encarregado</p>
+            </div>
+
+            <ul id="taskList">
+
+            </ul>
+        </div>
+    </main>
+    <script src="./../js/cadasMonstro.js"></script>
+</body>
+
+</html>
