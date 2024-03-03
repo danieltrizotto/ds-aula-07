@@ -1,11 +1,24 @@
+@media only screen  and (min-width:320px){
+    .box{
+        display: flex;
+        justify-content: center;
+    }
+}
+    
 
 body{
-    height: 1000px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(50deg, rgb(109, 106, 106) , rgb(31, 32, 32) );
 }
+.box{
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .container {
     width: 90%;
@@ -18,9 +31,7 @@ body{
     align-items: center;
 }
 
-h1 {
-    font-size: 24px;
-}
+
 
 input[type="text"] {
     width: 50%;
@@ -39,27 +50,16 @@ button {
     cursor: pointer;
     border-radius: 10px;
 }
-table{
-    display: flex;
-    justify-content: center;
-  align-content: center; 
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
-thead{
-    color: aliceblue;
-    display: flex;
-    justify-content: space-around;
+th, td {
+    border: 1px solid #082c01;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-
-
-#deleteTask{
-    background-color: #FF3547;
-    color: white;
-    border: none;
-    padding: 4px 8px;
-    cursor: pointer;
-    border-radius: 3px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}

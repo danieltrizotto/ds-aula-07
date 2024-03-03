@@ -1,50 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {//adicionar
-    const nomeInput = document.getElementById("nomeInput");
-    const cargoInput = document.getElementById("cargoInput");
-    const idadeInput = document.getElementById("idadeInput");
-    const cpfInput = document.getElementById("cpfInput");
+function addLinha() {
+    var nome = document.getElementById("nomeInput").value.trim();
+    var cargo = document.getElementById("cargoInput").value.trim();
+    var idade = document.getElementById("idadeInput").value.trim();
+    var cpf = document.getElementById("cpfInput").value.trim();
+    var tabela = document.getElementById("tabela");
 
-    const addTask = document.getElementById("addTask");
-    const taskList = document.getElementById("tabList");
+    var row = tabela.insertRow(-1);
 
 
+    if (nome === "" || cargo === "" || idade === "" || cpf === "") {
+        alert('preencha as informaçoes');
+    } else {
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.innerHTML = nome;
+        cell2.innerHTML = cargo;
+        cell3.innerHTML = idade;
+        cell4.innerHTML = cpf;
+    }
 
-    addTask.addEventListener("click", function () {//adicionar idade
-        if (nomeInput.value.trim() !== "") {//cargo
-            const currentTask = document.createElement("tr");
-            currentTask.innerHTML = `<td>${nomeInput.value.trim()}</td> <td><button class="deleteButton">deletar</button></td>`;
-
-            
-            taskList.appendChild(currentTask);//adiciona
-            
-
-            const removeAlltask = document.getElementsByClassName("deleteButton");
-            removeAlltask.addEventListener("click", function () {//DELETAR TUDO
-                taskList.removeChild(currentTask);
-              });
-        } else {
-            alert("preencha o requisitos");
-        }
-    });
-
-    addTask.addEventListener("click", function () {//adicionar idade
-        if (cargoInput.value.trim() !== "") {//cargo
-            const currentTask = document.createElement("tr");
-            currentTask.innerHTML = `<td>${nomeInput.value.trim()}</td> <td><button class="deleteButton">deletar</button></td>`;
-
-            
-            taskList.appendChild(currentTask);//adiciona
-            
-
-            const removeAlltask = document.getElementsByClassName("deleteButton");
-            removeAlltask.addEventListener("click", function () {//DELETAR TUDO
-                taskList.removeChild(currentTask);
-              });
-        } else {
-            alert("preencha o requisitos");
-        }
-    });
+    // Limpar os campos após adicionar a linha
+    document.getElementById("nomeInput").value = "";
+    document.getElementById("cargoInput").value = "";
+    document.getElementById("idadeInput").value = "";
+    document.getElementById("cpfInput").value = "";
 
 
 
-});
+}

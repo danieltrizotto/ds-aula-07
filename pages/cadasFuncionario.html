@@ -10,33 +10,30 @@
 
 <body>
     <main>
+        <h1>Cadastro de Funcionario</h1>
+        <br>
+        <br>
         <button type="button" class="voltar" onclick="location.href = './../pages/inicial.html'">Voltar</button>
+        <div class="box">
+            <div class="container">
+                <h2>Cadastro</h2>
 
-        <div class="container">
-            <h1>Cadastro</h1>
-
-            <input type="text" id="nomeInput" placeholder="Nome...">
-            <input type="text" id="cargoInput" placeholder="Cargo...">
-            <input type="text" id="idadeInput" placeholder="Idade...">
-            <input type="text" id="cpfInput" placeholder="CPF...">
-            <br />
-            <button id="addTask">Adicionar</button>
-            <br>
-            <table>
-                <thead>
+                <input type="text" id="nomeInput" placeholder="Nome...">
+                <input type="text" id="cargoInput" placeholder="Cargo...">
+                <input type="text" id="idadeInput" placeholder="Idade...">
+                <input type="text" id="cpfInput" placeholder="CPF...">
+                <br />
+                <button type="button" id="addTask" onclick="addLinha();">Adicionar</button>
+                <br>
+                <table id="tabela">
                     <tr>
                         <th>Nome</th>
                         <th>Cargo</th>
                         <th>Idade</th>
                         <th>CPF</th>
                     </tr>
-                </thead>
-                <tbody class="tabLista">
-
-                </tbody>
-
-            </table>
-
+                </table>
+            </div>
         </div>
     </main>
     <script src="./../js/cadasFuncionario.js"></script>
